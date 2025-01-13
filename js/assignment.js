@@ -20,6 +20,8 @@ const answerFourEl = document.getElementById("answer-four");
 const answerFiveEl = document.getElementById("answer-five");
 const answerSixEl = document.getElementById("answer-six");
 const submissionBtn = document.getElementById("submission-btn");
+let shiftValue;
+let popValue;
 
 function updateAnswerOne() {
     
