@@ -24,43 +24,53 @@ let shiftValue;
 let popValue;
 
 function updateAnswerOne() {
-    
+    answerOneEl.innerText = todos
 }
 
 function updateAnswerTwo() {
-
+    answerTwoEl.innerText = todos[2]
 }
 
 function removeLastValue() {
-
-}
-
-function removeFirstValue() {
-
-}
-
-function addShiftAndPopValues() {
-
+   popValue = todos.pop()
 }
 
 function updateAnswerFour() {
-
+    removeLastValue()
+    answerFourEl.innerText = todos
 }
 
 function reverseTodoList() {
-
+   todos.reverse()
 }
 
 function updateAnswerFive() {
+    reverseTodoList()
+    answerFiveEl.innerText = todos
+}
 
+function removeFirstValue() {
+    shiftValue = todos.shift()
+}
+
+function addShiftAndPopValues() {
+    removeFirstValue() 
+
+    todos.push(shiftValue)
+    todos.push(popValue)
 }
 
 function updateAnswerSix() {
-
+    addShiftAndPopValues()
+    answerSixEl.innerText = todos
 }
 
 function render() {
-
+    updateAnswerOne()
+    updateAnswerTwo()
+    updateAnswerFour()
+    updateAnswerFive()
+    updateAnswerSix()
 }
 
 submissionBtn.addEventListener("click", function () {
